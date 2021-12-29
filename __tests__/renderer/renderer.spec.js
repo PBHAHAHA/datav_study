@@ -8,6 +8,21 @@ describe('createRenderer', () => {
     const node = renderer.node();
     const group = renderer.group();
 
+    renderer.line({
+      x: 0,
+      y: 0,
+      x2: 200,
+      y2: 200,
+      stroke: 'red',
+      strokeWidth: 2,
+    });
+    renderer.rect({
+      x: 0,
+      y: 0,
+      width: 50,
+      height: 50,
+    });
+
     expect(node.tagName).toBe('svg');
     expect(node.getAttribute('width')).toBe('600');
     expect(node.getAttribute('height')).toBe('400');

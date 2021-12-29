@@ -14,6 +14,7 @@ export function scale(context, sx, sy) {
 
 export function save(context) {
   const { group } = context;
+  console.log(group);
   const newGroup = createSVGElement('g');
   mount(group, newGroup);
   context.group = newGroup;
