@@ -1,0 +1,46 @@
+{
+  "name": "datav_study",
+  "version": "1.0.0",
+  "description": "数据可视化学习库",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.0",
+    "jest": "^26.0.1",
+    "jest-electron": "^0.1.12",
+    "lint-staged": "^12.1.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.62.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "scripts": {
+    "lint": "eslint --fix",
+    "test": "jest --coverage",
+    "test-live": "DEBUG_MODE=1 jest --coverage",
+    "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PBHAHAHA/datav_study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PBHAHAHA/datav_study/issues"
+  },
+  "homepage": "https://github.com/PBHAHAHA/datav_study#readme",
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  }
+}
