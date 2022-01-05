@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "eslint --fix",
     "test": "jest --coverage",
-    "test-live": "DEBUG_MODE=1 jest --coverage",
+    "test-live": "DEBUG_MODE=1 npx jest --coverage",
     "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
     "prepare": "husky install",
     "ci": "run-s lint test build"
